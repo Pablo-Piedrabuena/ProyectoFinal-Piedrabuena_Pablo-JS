@@ -1,0 +1,46 @@
+/*-Reset*/
+@import "../utilities/mixins.scss";
+:root{
+    --color-celeste: #007bff;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+strong, em {
+    font-weight: normal;
+}
+
+.ocultar{
+    display: none;
+}
+.flex{
+    display: flex;
+}
+
+/* .card{
+    position: relative;
+    width: 15rem;
+    img{
+        @include estilo-imagen;
+    }
+    .overlay {
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            user-select: none;
+        }
+    }
+} */

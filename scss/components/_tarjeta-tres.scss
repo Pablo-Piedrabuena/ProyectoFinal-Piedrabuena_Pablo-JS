@@ -1,0 +1,41 @@
+@import "../utilities/variables";
+
+/*-COMPONENTS_Tarjeta Tres: Titulo, Parrafo e Imagenes c/Leyenda*/
+.tarjeta--filosofia-calidad{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    padding: 0.5rem;
+    width: 80%;
+    border-radius: 1rem;
+    @include box-shadow($color-celeste);
+    align-items: center;
+    h2{
+        @include fuente-texto(1.5rem,bold);
+        color:$color-texto;
+        display: block;
+        width: 100%;
+        margin: .5rem;
+        
+    }
+    p{
+        @extend h2;
+        @include fuente-texto(1rem,400);
+    }
+    .tarjeta--filosofia__item{
+        float: none;
+        width: 10rem;
+        box-sizing: border-box;
+        picture{
+            img{
+                @include estilo-imagen;
+            }
+        }
+        figcaption{
+            text-align: center;
+            @include fuente-texto(1rem,400);
+            color:$color-texto;
+        }
+    }
+}

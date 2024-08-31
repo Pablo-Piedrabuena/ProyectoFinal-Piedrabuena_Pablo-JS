@@ -1,0 +1,63 @@
+@import "../utilities/variables";
+
+
+#mensaje-Alerta{
+    /* display: none; */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow:none;
+    background-color: rgba(0,0,0,0.4);
+    box-sizing: border-box;
+    justify-content: center;
+    #mensaje-Alerta__contenedor{
+        position: relative;
+        background-color: $colorgris-claro;
+        width: 25%;
+        height: 25%;
+        margin: 10% auto;
+        padding: 0;
+        background-color: $color-fondo-form;
+        border-radius: 5px;
+        
+        #mensaje-Alerta__titulo{
+            box-sizing: border-box;
+            text-align: center;
+            margin: 0;
+            width: 100%;
+            padding: .3rem;
+            /* margin-top: 1rem; */
+            display: block;
+            @include fuente-texto(1.2rem,400);
+            background-color: $color-celeste;
+            color:$colorgris-claro;
+            user-select: none;
+            border-bottom:  1px solid $color-celeste;
+            border-radius: 5px 5px 0 0;
+        }
+        #mensaje-Alerta__mensaje{
+            @include fuente-texto(1.1rem,400);
+            color:$color-texto;
+            user-select: none;
+            text-align: left;
+            width: 90%;
+            margin: .5rem auto;
+        }
+        #mensaje-Alerta__boton{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 8px;
+            width: 5rem;
+            margin: .5rem auto;
+            padding: .5rem;
+            background-color: $color-celeste;
+            color: $colorgris-claro;
+        }
+    }
+    
+}

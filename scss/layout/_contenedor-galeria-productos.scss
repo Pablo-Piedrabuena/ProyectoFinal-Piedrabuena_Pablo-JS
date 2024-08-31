@@ -1,0 +1,12 @@
+@import "../utilities/variables";
+/*-LAYOUT_Contenedor Galeria productos: Para todos los contenedores*/
+.galeria__productos{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    justify-content: center;
+    align-items:baseline;
+    width: 80%;
+    border-radius: 1rem;
+    @include box-shadow($color-celeste);
+}

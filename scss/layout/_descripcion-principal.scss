@@ -1,0 +1,20 @@
+@import "../utilities/variables";
+/*-LAYOUT_Descripcion Principal: Para Todos los p con esta clase*/
+.descripcion-principal{
+    align-items: center;
+    h2{
+        @include fuente-texto(1.5rem,400);
+        color:$color-texto;
+        text-align: center;
+        width: 80%;
+        margin: 1rem auto;
+    }
+    p{
+        @extend h2;
+        @include fuente-texto(1rem,400);
+        /* color:$color-texto;
+        text-align: center;
+        width: 80%;
+        margin: auto; */
+    }
+}

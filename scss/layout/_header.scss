@@ -1,0 +1,92 @@
+@import "../utilities/variables";
+/*-LAYOUT_Header: Logo y Menu de Navegacion*/
+header{
+    display: flex;
+    background-color: $color-celeste;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    padding-bottom: .5rem;
+    .contenedor-logo{
+        position: relative;
+        width: 5rem;
+        margin: 0;
+        a{
+            picture{
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .relleno{
+            position: absolute;
+            margin: auto;
+            z-index: -1;
+            width: 90%;
+            background-color: white;
+            animation-name: relleno-liquido;
+            animation-timing-function:linear;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+        }
+    }
+    
+    .btn-toggle{
+        display: none;
+        background-color: $color-celeste;
+    }
+
+    nav{
+        user-select: none;
+        display: flex;
+        .nav__list{
+            display: flex;
+            margin-bottom: 0;
+            padding-left: 0;
+            .list__item{
+                list-style: none;
+                margin-bottom: 0;
+                margin: 2px;
+                align-content: center;
+                margin-bottom: 0;
+                padding: 0.5rem;
+                a{
+                    @include fuente-texto(1rem,400);
+                    color: white;
+                    text-decoration: none;
+                }
+                label{
+                    @include fuente-texto(1rem,400);
+                    color: white;
+                    text-decoration: none;
+                }
+                .item__dropdown{
+                    display: none;
+                    position: absolute;   
+                    min-width: 18rem;   
+                    z-index: 1;
+                    border-radius: 0 0 10px 10px;
+                    background-color:$color-celeste-claro;
+                    min-width: 180px;   
+                    padding: 20px 15px;
+                    .dropdown__item{
+                        @extend .list__item;
+                        a{
+                            @include fuente-texto(1rem,400);
+                            color: white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            &:hover .item__dropdown{
+                    display: block;
+                }
+            }
+        }
+    }
+}

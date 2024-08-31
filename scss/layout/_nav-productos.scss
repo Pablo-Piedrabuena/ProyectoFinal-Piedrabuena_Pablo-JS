@@ -1,0 +1,37 @@
+@import "../utilities/variables";
+.section-filtro{
+    align-items: center;
+    width: 80%;
+    margin: 2rem auto;
+    nav{
+        margin: auto;
+        text-align: center;
+        user-select: none;
+        display: flex;
+        justify-content: center;
+        user-select: none;
+        /* display: flex; */
+        .navproductos{
+            display: flex;
+            margin-bottom: 0;
+            padding-left: 0;
+            list-style: none;
+            .navproductos__item{
+                margin-bottom: 0;
+                margin: 25px;
+                margin-bottom: 0;
+                a{
+                    color:$color-celeste;
+                    @include fuente-texto(1rem,400);
+                    text-decoration: none;
+                }
+            &:hover .item__dropdown{
+                    /* display: block; */
+                }
+            }
+        }
+    }
+}
+.elemento-seleccionado{
+    border-bottom: 2px solid $color-celeste;
+}

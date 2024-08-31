@@ -1,0 +1,125 @@
+@import "../utilities/variables";
+.modal-agregarProducto-Carrito{
+    /* display: flex; */
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow:none;
+    background-color: rgba(0,0,0,0.4);
+    box-sizing: border-box;
+    justify-content: center;
+    transition: all 3s ease-in-out;
+    .agregarProducto-Carrito__ConetenedorImagen{
+        background-color: $colorgris-claro;
+        width: 45%;
+        margin: 2rem 0;
+        padding: 0;
+        background-color: $color-fondo-form;
+        img{
+            margin: auto;
+            width: 90%;
+            display: block;
+        }
+    }
+    .agregarProducto-Carrito__Conetenedorform{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        /* background-color: $colorgris-claro; */
+        background-color: $color-fondo-form;
+        width: 25%;
+        margin: 2rem 0;
+        border-left: 1px solid $color-linea-separadora;
+        padding-left: 1rem;
+        .Conetenedorform__boton-salir{
+            margin: 0;
+            position: absolute;
+            top: 13px;
+            right: 3px;
+            left: none;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background-color: $color-celeste;
+            color: $colorgris-claro;
+        }
+        h3{
+            /* display: block; */
+            width: 100%;
+            margin-top: 5rem;
+            display: block;
+            @include fuente-texto(1.5rem,bold);
+            color:$color-celeste;
+            user-select: none;
+        }
+        .precio{
+            margin-top: 0;
+            display: block;
+            width: 50%;
+            @include fuente-texto(1.2rem,600);
+            color:$color-celeste;
+            user-select: none;
+        }
+        p{
+            @include fuente-texto(1.1rem,400);
+            color:$color-texto;
+            user-select: none;
+        }
+        .cantidad-disponible{
+            display: flex;
+            margin-right: 1rem;
+        }
+        .cantidad-comprar{
+            display: flex;
+            
+            label{
+                /* @extend p; */
+                @include fuente-texto(1.1rem,400);
+                color:$color-texto;
+                user-select: none;
+                margin-right: 1rem;
+            }
+            input{
+                @include fuente-texto(1rem,400);
+                color:$color-texto;
+                border:1px solid $color-celeste;
+                width: 5rem;
+                color: $color-texto;
+                text-align: center;
+                &:focus{
+                    outline: 1px solid $color-celeste;
+                }
+            }
+            .Conetenedorform__agregar-carrito{
+                text-align:center;
+                align-content: center;
+                width: 10rem;
+                @include fuente-texto(1rem,400);
+                background-color: #135D87;
+                color: $colorgris-claro;
+                height: 2.5rem;
+                margin: 12rem;
+                border-radius: 5px 5px 5px 5px;
+                margin: auto;
+            }
+            
+        }
+        /* #Conetenedorform__agregar-carrito{
+            position: absolute;
+            bottom: 5rem;
+            left: 0;
+            right: 0;
+            border-radius: 8px;
+            width: 15rem;
+            margin: .5rem auto;
+            padding: .5rem;
+            background-color: $color-celeste;
+            color: $colorgris-claro;
+        
+        } */
+        
+    }
+}

@@ -1,0 +1,48 @@
+@import "../utilities/variables";
+
+/*-UTILITIES__Media Query Medium: Para la vista Tablet*/
+@media screen and (min-width: 427px) and (max-width: 767px){
+    .contenedor__tarjeta{
+        display: flex;
+        flex-direction: column;
+        .item--textoDos{
+            order: 1;
+        }
+        .item--imagenDos{
+            order: 2;
+        }
+    }
+    .contenedor__contacto{
+        flex-direction: column;
+        box-shadow: none;
+        .contacto__formulario{
+            border-radius: 5px 5px 5px 5px;
+            margin-bottom: 2rem;
+            @include box-shadow($color-celeste);
+        }
+        .contacto__mapa{
+            width: 100%;
+            border-radius: 5px 5px 5px 5px;
+            @include box-shadow($color-celeste);
+        }
+    }
+    .contenedor-footer {
+        flex-direction: column;
+        .contenedor-footer__columna {
+            flex: 1; /* Cada columna ocupa todo el ancho disponible */
+            border-bottom: 1px solid $colorgris-claro;
+            text-align: center;
+            a{
+                display: block;
+            }
+            a:not(.email){
+                display: inline;
+            }
+        }
+        .columna__parrafo{
+            padding-bottom: 0;
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+}

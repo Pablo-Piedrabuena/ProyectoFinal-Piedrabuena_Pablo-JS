@@ -1,0 +1,102 @@
+@import "../utilities/variables";
+.carrito-finalizacion__entrega{
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    width: 100%;
+}
+    .envio__form-entrega{
+        background-color: $color-fondo-form;
+        border-radius: 5px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        margin: .5rem;
+       /*  height: 100%; */
+        h3{
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            @include fuente-texto(1.3rem,600);
+            color:$color-celeste;
+            text-align: center;
+        }
+        .contendor-envio-planta{
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            border-bottom: 1px solid $color-linea-separadora;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: .5rem;
+            p{
+                margin-left: auto;
+                /* @extend label; */
+            }
+        }
+        .contendor-envio-domicilio{
+            @extend .contendor-envio-planta;
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            p{
+                margin-left: auto;
+                @extend label;
+            }
+        }
+        .contendor-envio-provincia{
+            @extend .contendor-envio-planta;
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+        }
+        .contendor-envio-localidad{
+            @extend .contendor-envio-planta;
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+        }
+        .contendor-envio-datos-domicilio{
+            @extend .contendor-envio-planta;
+            grid-column: 1 / 2;
+            grid-row: 6 / 7;
+        }
+    }
+
+
+.style-label-input{
+    @include fuente-texto(1rem,400);
+    color:$color-texto;
+}
+.style-select{
+    width: 20rem;
+    height: 1.5rem;
+    border-radius: 5px;
+    background-color: #fff;
+    color:$color-texto;
+    border:none;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    /* margin-bottom: 1rem; */
+    border-bottom:1px solid $color-celeste;
+    &:focus {
+        outline: none;
+        border:1px solid $color-celeste;
+    }
+    option {
+        background-color: #f9f9f9;
+        @include fuente-texto(1rem,400);
+        color:$color-texto;
+    }
+    option:checked {
+        background-color: rgba(19, 93, 135, .7);
+        color: #fff;
+    }
+    
+}
+.envio-datos-domicilio{
+    @include fuente-texto(1rem,400);
+    &:focus {
+        outline: none;
+        border:1px solid $color-celeste;
+    }
+}

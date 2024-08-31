@@ -1,0 +1,11 @@
+@import "../utilities/variables";
+/*-LAYOUT_Contenedor Contactos: Contenedor form Contactos*/
+.contenedor__contacto{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    @include box-shadow($color-celeste);
+}

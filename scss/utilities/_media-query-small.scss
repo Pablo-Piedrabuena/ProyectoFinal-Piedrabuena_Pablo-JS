@@ -1,0 +1,127 @@
+@import "../utilities/variables";
+
+/*-UTILITIES__Media Query Small: Para la vista Mobile*/
+@media screen and (max-width: 427px){
+    header{
+        a{
+            display: inline-block;
+            width: 80px;  
+        }
+        
+        .btn-toggle{
+            display: inline;
+            background-color: $color-celeste;
+            margin: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }   
+        input:checked ~ nav{
+            display:block;
+            width: 100%;
+            flex-wrap: wrap;
+        }  
+        .nav{
+            
+            display: none;
+            .nav__list{
+                display: block;
+                .list__item{
+                    padding: 0;
+                    a{
+                        text-align: left;
+                    }
+                    .item__dropdown{
+                        visibility: hidden;
+                    }
+                    input:checked  ~ .item__dropdown{
+                        visibility:visible;
+                        display:block;
+                        width: 100%;
+                        flex-wrap: wrap;
+                        position: inherit;
+                        padding: 0;
+                        margin: 0;
+                        background-color: rgba(255, 255, 255,.1);
+                        border-radius: 0 0 0 0;
+                        padding: .5rem;
+                        li{
+                            display: block;
+                            width: 100%;
+                            background-color: transparent;
+                            text-align: left;
+                            padding: 0;
+                            a{
+                                display: block;
+                                width: 100%;
+                                color: $colorgris-claro;
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    .item__dropdown{
+                        display: none;
+                    }
+                }
+                
+            }
+        }        
+    }
+    .navproductos{
+        display: block;
+        .navproductos__item{
+            padding: 0;
+            a{
+                text-align: left;
+            }
+        }
+    }       
+
+    .contenedor__tarjeta{
+        display: flex;
+        flex-direction: column;
+        .item--textoDos{
+            order: 1;
+        }
+        .item--imagenDos{
+            order: 2;
+        }
+    }
+    
+    .contenedor__contacto{
+        flex-direction: column;
+        box-shadow: none;
+        .contacto__formulario{
+            border-radius: 5px 5px 5px 5px;
+            margin-bottom: 2rem;
+            @include box-shadow($color-celeste);
+        }
+        .contacto__mapa{
+            width: 100%;
+            border-radius: 5px 5px 5px 5px;
+            @include box-shadow($color-celeste);
+        }
+    }
+    
+    .contenedor-footer {
+        flex-direction: column;
+        .contenedor-footer__columna {
+            flex: 1; /* Cada columna ocupa todo el ancho disponible */
+            border-bottom: 1px solid $colorgris-claro;
+            text-align: center;
+            a{
+                display: block;
+                margin: 1rem;
+            }
+            /* a:not(.email){
+                display: inline;
+                flex-wrap: wrap;
+            } */
+        }
+        .columna__parrafo{
+            padding-bottom: 0;
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+}

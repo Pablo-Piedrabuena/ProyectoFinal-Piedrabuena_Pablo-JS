@@ -1,0 +1,63 @@
+@import "../utilities/variables";
+/*-COMPONENTS__formulario Contacto: Formulario y Mapa*/
+.contacto__formulario{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    h3{
+        display: block;
+        @include fuente-texto(1.5rem,bold);
+        color:$color-texto;
+        text-align: center;
+        width: 90%;
+    }
+    label{
+        display: block;
+        margin: .2rem auto;
+        @include fuente-texto(1rem,400);
+        color:$color-texto;
+        width: 90%;
+        align-items: center;
+    }
+    input{
+        @extend label;
+        border:none;
+        border-bottom:1px solid $color-celeste;
+        &:focus{
+            outline: none;
+        }
+    }
+    textarea{
+        @extend label;
+        border:none;
+        border-bottom:1px solid $color-celeste;
+        &:focus{
+            outline: none;
+        }
+    }
+    button{
+        display: inline;
+        border-radius: 8px;
+        width: 100px;
+        margin: .5rem auto;
+        padding: .5rem;
+        background-color: $color-celeste;
+        color: $colorgris-claro;
+    
+    }
+
+}
+.contacto__mapa{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    h3{
+        @include fuente-texto(1.5rem,bold);
+        color:$color-texto;
+        text-align: center;
+    }
+    iframe{
+        margin: .5rem auto;
+        width: 90%;
+    }
+}

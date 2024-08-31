@@ -1,0 +1,54 @@
+@import "./variables";
+
+/*-UTILITIES__Animaciones:*/
+
+/*--Animaciones: Clase C/Animacion Aplicada*/
+.elemento-balancear {
+    animation: animacion-balancear 1s ease-in-out infinite;
+}
+
+/*--Animaciones: Hacer balancear elemento*/
+@keyframes animacion-balancear {
+    0% { transform: translateZ(0) rotateZ(0deg); }
+    50% { transform: translateZ(50px) rotateZ(2.5deg); }
+    100% { transform: translateZ(0) rotateZ(0deg); }
+}
+
+/*--Animaciones: hacer que elemento vaya creciendo y posicionandose
+                para dar el efecto que la imagen se llena de blanco*/
+@keyframes relleno-liquido{
+    0%{
+        height: 10%;
+        width: 2%;
+        top: 0;
+        right: 50%;
+    }
+    50%{
+        height: 50%;
+        width: 25%;
+        top: 0;
+        right: 25%;    
+    }
+    100%{
+        top: 0;
+        right:0;
+        height: 90%;
+        width: 100%;
+    }
+}
+
+/*--Animaciones: hacer que el boton whatasapp genere un pulso*/
+@keyframes pulso {
+    0% {
+        box-shadow: 0 0 0 0 #2BF113;
+    }
+    30% {
+        box-shadow: 0 0 0 20px rgba(239,76,53, 0);
+    }
+    70% {
+        box-shadow: 0 0 0 0px rgba(239,76,53, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0px #25D366;
+    }
+}

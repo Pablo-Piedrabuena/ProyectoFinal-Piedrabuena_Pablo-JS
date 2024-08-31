@@ -1,0 +1,23 @@
+@import "../utilities/variables";
+/*-COMPONENTS_Tarjeta Uno: Estilo Texto Izquierda, Imagen Derecha*/
+    .item--texto{
+        grid-column: 1/2;
+        grid-row: 1/4;
+        padding: 0.5rem;
+        @include fuente-texto(1rem,400);
+        margin: auto;
+        text-align: justify;
+        color: $color-texto;
+        }
+    .item--imagen{
+        grid-column: 2/3;
+        grid-row: 1/4; 
+        margin: auto;
+        width: 100%;
+        text-align: right;
+        picture{
+            img{
+                @include estilo-imagen;
+            }
+        }
+    }

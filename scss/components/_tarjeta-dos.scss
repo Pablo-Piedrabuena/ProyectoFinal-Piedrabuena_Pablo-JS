@@ -1,0 +1,23 @@
+@import "../utilities/variables";
+/*-COMPONENTS_Tarjeta Dos: Estilo Texto Derecha, Imagen Izquierda<*/
+    .item--textoDos{
+        grid-column: 2/3;
+        grid-row: 1/4; 
+        padding: 0.5rem;
+        margin: auto;
+        text-align: justify;
+        @include fuente-texto(1rem,400);
+        color:$color-texto;
+    }
+    .item--imagenDos{
+        grid-column: 1/2;
+        grid-row: 1/4;
+        margin: auto;
+        width: 100%;
+        text-align: left;
+        picture{
+            img{
+                @include estilo-imagen;
+            }
+        }
+    }

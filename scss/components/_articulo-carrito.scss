@@ -1,0 +1,69 @@
+@import "../utilities/variables";
+.carrito-articulo{
+        display: flex;
+         width: 100%;
+        /*height: 100%; */
+        box-sizing: border-box;
+        align-items: center;
+        /* text-align: center; */
+        border-bottom: 1px solid $color-linea-separadora;
+    #articulo__contenedor-imagen{
+        width: 15%;
+        /* margin: 2rem 0; */
+        /* padding: 0; */
+        /* background-color: $color-fondo-form; */
+        #contenedor-imagen__imagen{
+            /* margin: auto; */
+            width: 100%;
+            /* display: block; */
+        }
+    }
+    #articulo__contenedor-descripcion{
+        margin: auto;
+        text-align: left;
+        width: 70%;
+        box-sizing: border-box;
+        #contenedor-descripcion__nombre-producto{
+            text-align: left;
+            width: 100%;
+            @include fuente-texto(1.2em,600);
+            color:$color-celeste;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        #contenedor-descripcion__descripcion-producto{
+            text-align: left;
+            width: 100%;
+            @include fuente-texto(1rem,400);
+            color:$color-texto;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    #articulo__boton-cantidad{
+        box-sizing: border-box;
+        width: 25%;
+        @include fuente-texto(1.2rem,400);
+        color:$color-texto;
+    }
+    #articulo__boton-eliminar{
+        box-sizing: border-box;
+        margin: 2rem;
+        padding: 0;
+        /* border: none; */
+        /* background-color: transparent; */
+        width: 3%;
+        height: 3%;
+        img{
+            width: 100%;
+        }
+    }
+    #articulo__precio{
+        box-sizing: border-box;
+        width: 25%;
+        @include fuente-texto(1.2rem,400);
+        color:$color-texto;
+    }
+}

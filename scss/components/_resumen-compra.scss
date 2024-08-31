@@ -1,0 +1,25 @@
+@import "../utilities/variables";
+#resumen-compra__total-prodcutos{
+    box-sizing: border-box;
+    width: 100%;
+    @include fuente-texto(1.2rem,400);
+    color:$color-texto;
+    margin: 1rem .5rem;
+}
+#resumen-compra__importe-total{
+    box-sizing: border-box;
+        width: 100%;
+        @include fuente-texto(1.2rem,400);
+        color:$color-texto;
+        margin: 1rem .5rem;
+}
+button{
+    display: block;
+    border-radius: 8px;
+    width: 12rem;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    background-color: #135D87;
+    color: #E6E6E6;
+    margin-top: 5rem;
+}

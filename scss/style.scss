@@ -1,0 +1,38 @@
+/*BASE:*/
+@import "./base/reset";
+@import "./utilities/mixins";
+
+/*LAYOUT:*/
+@import "./components/whatsapp-button";
+@import "./components/carrito-button";
+@import "./layout/header";
+@import "./layout/titulo-principal";
+@import "./layout/descripcion-principal";
+@import "./layout/contenedor-tarjeta";
+@import "./layout/contenedor-galeria-productos";
+@import "./layout/contenedor-contacto";
+@import "./layout/footer";
+@import "./layout/nav-productos";
+@import "./layout/seccion-carrito";
+@import "./layout/seccion-carrito-finalizacion";
+
+/*COMPONENTS:*/
+@import "./components/tarjeta-uno";
+@import "./components/tarjeta-dos";
+@import "./components/tarjeta-tres";
+@import "./components/item-producto";
+@import "./components/formulario-contacto";
+@import "./components/formulario-agregarProducto";
+@import "./components/mensaje-alerta";
+@import "./components/articulo-carrito";
+@import "./components/resumen-compra";
+@import "./components/carrito-finalizacion_entrega";
+@import "./components/carrito-finalizacion_pago";
+@import "./components/_carrito-finalizacion_resumen";
+
+/*UTILITIES:*/
+@import "./utilities/variables";
+@import "./utilities/media-query-small";
+@import "./utilities/media-query-medium";
+@import "./utilities/media-query-large";
+@import "./utilities/animaciones";

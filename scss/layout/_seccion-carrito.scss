@@ -1,0 +1,65 @@
+@import "../utilities/variables";
+#seccion-carrito{
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 95vw;
+    height: 95vh;
+    overflow: none;
+    background-color: rgba(19,93,135,0.7);
+    justify-content: center;
+    border: 1px solid white;
+    padding: 2rem;
+    box-sizing: border-box;
+    margin: 1rem auto;
+    justify-content: center;
+    border-radius: 1rem;
+    /* @include box-shadow($color-celeste); */
+    #seccion-carrito__boton-salir{
+        margin: 0;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-color: $color-celeste;
+        color: $colorgris-claro;
+        border: 1px solid $colorgris-claro;
+        color: white;
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+    }
+    
+    #contendor-carrito{
+        border-radius: 1rem;
+        background-color: $color-fondo-form;
+        border-radius: 5px;
+        margin: .5rem;
+        width: 75%;
+        justify-content:start;
+        overflow: auto;
+        h2{
+            @include fuente-texto(1.5rem,600);
+            color:$color-celeste;
+            margin-left: .5rem;
+            text-align: center;
+        }
+        #contendor-carrito__contenedor-articulos{
+            overflow: auto;
+        }
+    }
+    #contendor-resumen-compra{
+        border-radius: 1rem;
+        background-color: $color-fondo-form;
+        border-radius: 5px;
+        margin: .5rem;
+        width: 25%;
+        justify-content: center;
+        h2{
+            @include fuente-texto(1.5rem,600);
+            color:$color-celeste;
+            text-align: center;
+        }
+    }
+}

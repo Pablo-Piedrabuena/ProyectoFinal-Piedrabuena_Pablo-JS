@@ -1,0 +1,85 @@
+@import "../utilities/variables";
+
+ .carrito-finalizacion__resumen{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    /* width: 100%; */
+    background-color: $color-fondo-form;
+
+
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(5, 1fr); */
+    grid-template-rows: repeat(5, 1fr);
+    margin: .5rem;
+    h3{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        @include fuente-texto(1.3rem,600);
+        color:$color-celeste;
+        text-align: center;
+        margin: .5rem;
+    }
+    .resumen__total-productos{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        border-bottom: 1px solid $color-linea-separadora;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        margin: .5rem;        
+        p{
+            /* margin:0;
+            margin-left: auto; */
+            margin: 0;
+            @include fuente-texto(1rem,400);
+            color:$color-texto;
+        }
+    }
+    .resumen__total-envio{
+        @extend .resumen__total-productos;
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        p{
+            margin-left: auto;
+            @include fuente-texto(1rem,400);
+            color:$color-texto;
+        }
+    }
+    .resumen__total-total{
+        @extend .resumen__total-productos;
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        p{
+            /* margin:0 */
+            /* margin-left: auto; */
+            padding: 0;
+            text-align: right;
+            @include fuente-texto(1rem,400);
+            color:$color-texto;
+        }
+    }
+}
+
+.terminar-compra{
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    text-align:center;
+    align-content: center;
+    width: 10rem;
+    @include fuente-texto(1rem,400);
+    background-color: #135D87;
+    color: $colorgris-claro;
+    height: 2.5rem;
+    margin: 12rem;
+    border-radius: 5px 5px 5px 5px;
+    margin: auto;
+}
+.style-label-input{
+    @include fuente-texto(1rem,400);
+    color:$color-texto;
+}

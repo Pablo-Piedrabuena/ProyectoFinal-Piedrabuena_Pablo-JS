@@ -1,0 +1,17 @@
+/*-Mixins: Fuentes*/
+@mixin fuente-texto($font-size, $font-weight){
+    font-family: 'Barlow', sans-serif;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+/*-Mixins: sobra*/
+@mixin box-shadow($color){
+    box-shadow: 0px -2px 36px -16px $color;
+}
+/*-Mixins: estilo imagen*/
+@mixin estilo-imagen(){
+    width: 100%;
+    object-fit:cover;
+    border-radius: 10px;
+    margin: auto;
+}
