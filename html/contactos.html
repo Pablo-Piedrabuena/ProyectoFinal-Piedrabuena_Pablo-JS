@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nogolac-Contactos</title>
+    <link rel="icon" href="../imagenes/icon-pestania.png" type="Imagen/png">
+    <meta name="title" content="Nogolac - Productos Lácteos de Calidad">
+    <meta name="keywords" content="planta, fabrica, quesos,quesos artesanales, calidad, crema, ricotta, sardo, barra, pizzero, cremoso, leche, por salut, manteca, entre ríos, nogoya">
+    <meta name="keywords" content="control de calidad, estándares de higiene, seguridad alimentaria, ingredientes de primera calidad">
+    <meta name="telephone" content="+543435-123">
+    <meta name="whatsapp" content="tel:+543435-123">
+    <meta name="author" content="Pablo Piedrabuena">
+    <!-- Open Graph / Facebook - Generado Por https://metatags.io-->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pablo-piedrabuena.github.io/ProyectoFinal-Piedrabuena_Pablo/">
+    <meta property="og:title" content="Nogolac - Productos Lácteos de Calidad">
+    <meta property="og:description" content="Descubre los auténticos sabores de la región en nuestros quesos, ricotta y crema. Planta de Producción: Nogoyá, Entre Ríos (CP 3150).">
+    <meta property="og:image" content="https://pablo-piedrabuena.github.io/ProyectoFinal-Piedrabuena_Pablo/imagenes/carrusel/carousel-image-uno.png">
+    <!-- Twitter  - Generado Por https://metatags.io-->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pablo-piedrabuena.github.io/ProyectoFinal-Piedrabuena_Pablo/">
+    <meta property="twitter:title" content="Nogolac - Productos Lácteos de Calidad">
+    <meta property="twitter:description" content="Descubre los auténticos sabores de la región en nuestros quesos, ricotta y crema. Planta de Producción: Nogoyá, Entre Ríos (CP 3150).">
+    <meta property="twitter:image" content="https://pablo-piedrabuena.github.io/ProyectoFinal-Piedrabuena_Pablo/imagenes/carrusel/carousel-image-uno.png">
+    <!--LINK PARA USO DE GOOGLE FONTS - TIPO LETRA-->
+    <link href="https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!--LINK ANIMACIONES AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <!--LINK A ARCHIVO STYLE PROPIO-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!--Icono whatsapp -->
+    <div class="whatsapp-btn" data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <a href="https://api.whatsapp.com/send?phone=346" target="_blank"><img src="../imagenes/ws.png" alt="Icono Whatsapp"></a>
+    </div>
+    <header>
+        <div class="contenedor-logo elemento-balancear">
+            <a href="../index.html" tabindex="-1">
+                <picture>
+                    <source srcset="../imagenes/logo.webp" type="image/webp">
+                    <img src="../imagenes/logo.png" alt="Logo Nogolac - Productos lácteos de calidad">
+                </picture>
+            </a>
+            <div class="relleno"></div>
+        </div>
+        <input type="checkbox" id="menu" style="display: none;">
+        <label for="menu" class="btn-toggle" tabindex="0"><img src="../imagenes/iconos/menu-hamburguesa.png" alt="icono menu hamburguesa"></label>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="list__item"><a href="../index.html">Inicio</a></li>
+                <li class="list__item">
+                    <input type="checkbox" id="submenu" style="display: none;">
+                    <label for="submenu" tabindex="0">Empresa</label>
+                    <ul class="item__dropdown">
+                        <li class="dropdown__item"><a href="calidad.html">Calidad</a></li>
+                        <li class="dropdown__item"><a href="produccion.html">Produccion</a></li>
+                        <li class="dropdown__item"><a href="distribucion.html">Distribucion</a></li>
+                    </ul>
+                </li>
+                <li class="list__item"><a href="productos.html">Productos</a></li>
+                <li class="list__item"><a href="contactos.html">Contacto</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">Contactanos</h1>
+        <section class="contenedor__contacto" data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+            <form class="contacto__formulario">
+                <h3><strong>Consultas y Reclamos</strong></h3>
+                <label for="nombre">Nombre*</label>
+                <input type="text" id="nombre" name="nombre"  required>
+                <label for="direccion">Dirección*</label>
+                <input type="text" id="direccion" name="direccion" >
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+                <label for="telefono">Teléfono*</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                <label for="mensaje">Mensaje*</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div class="contacto__mapa">
+                <h3>Estamos Aquí</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d107806.24324246972!2d-59.8002694!3d-32.3938333!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b135e079e3198b%3A0x9a4e43d439446c0d!2sNogolac%20S.A.!5e0!3m2!1ses!2sar!4v1712623898726!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="contenedor-footer">
+        <div class="contenedor-footer__columna">
+            <h3>Oficinas</h3>
+            <p>Alem y Boulevar Sarmiento</p>
+            <p>Nogoyá, Entre Ríos (CP 3150)</p>
+            <p>Tel.:(03435) 421124</p>
+        </div>
+        <div class="contenedor-footer__columna">
+            <h3>Planta</h3>
+            <p>Nogoyá, Entre Ríos (CP 3150)</p>
+            <p>Tel.:(03435) 425058</p>
+        </div>
+        <div class="contenedor-footer__columna">
+            <h3>Email:</h3>
+            <a class="email" href="mailto:ventas@lacteosnogolac.com">ventas@lacteosnogolac.com</a>
+            <a class="email" href="mailto:lacteosnogolac@hotmail.com">lacteosnogolac@hotmail.com</a>
+        </div>
+        <div class="contenedor-footer__columna">
+            <h3>Seguinos</h3>
+            <a href="https://www.facebook.com/L%C3%A1cteos-Nogolac-105397054165370/" target="_blank" rel="noopener"><img src="../imagenes/iconos/facebook.png" alt="Icono facebook  con enlace"></a>
+            <a href="https://www.instagram.com/lacteosnogolac/" target="_blank" rel="noopener"><img src="../imagenes/iconos/instagram.png" alt="icono instagram con enlace"></a>
+            <a href="https://www.twitter.com/lacteosnogolac/" target="_blank" rel="noopener"><img src="../imagenes/iconos/x.png" alt="icono x con enlace"></a>
+            <a href="https://www.google.com.ar/maps/place/Nogolac/@-32.3938333,-59.8002694,12z/data=!4m8!1m2!2m1!1slacteos+nogolac!3m4!1s0x95b135e079e3198b:0x9a4e43d439446c0d!8m2!3d-32.395391!4d-59.7948416" target="_blank" rel="noopener"><img src="../imagenes/iconos/google.png" alt="icono google con enlace"></a>
+        </div>
+        <div class="columna__parrafo">
+            <p class="">© Pablo P - Pagina hecha solo a fines educativos.</p>
+        </div>
+    </footer>
+    <!--SCRIPT ANIMACIONES AOS-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>    
+</body>
+</html>
