@@ -1,0 +1,1639 @@
+/*BASE:*/
+/*-Reset*/
+/*-Mixins: Fuentes*/
+/*-Mixins: sobra*/
+/*-Mixins: estilo imagen*/
+:root {
+  --color-celeste: #007bff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+strong, em {
+  font-weight: normal;
+}
+
+.ocultar {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+/* .card{
+    position: relative;
+    width: 15rem;
+    img{
+        @include estilo-imagen;
+    }
+    .overlay {
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            user-select: none;
+        }
+    }
+} */
+/*-Mixins: Fuentes*/
+/*-Mixins: sobra*/
+/*-Mixins: estilo imagen*/
+/*LAYOUT:*/
+.whatsapp-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  z-index: 100;
+  animation: pulso 2s infinite linear;
+  border-radius: 50%;
+}
+
+.carrito-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 100;
+  animation: pulso 2s infinite linear;
+  border-radius: 15%;
+  width: 3rem;
+  /* background-color: red; */
+  /* a{
+      img{
+          width: 100%;
+      }
+  } */
+}
+.carrito-btn img {
+  width: 100%;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*-LAYOUT_Header: Logo y Menu de Navegacion*/
+header {
+  display: flex;
+  background-color: #135D87;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  padding-bottom: 0.5rem;
+}
+header .contenedor-logo {
+  position: relative;
+  width: 5rem;
+  margin: 0;
+}
+header .contenedor-logo a picture img {
+  width: 100%;
+  object-fit: contain;
+}
+header .contenedor-logo .relleno {
+  position: absolute;
+  margin: auto;
+  z-index: -1;
+  width: 90%;
+  background-color: white;
+  animation-name: relleno-liquido;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+}
+header .btn-toggle {
+  display: none;
+  background-color: #135D87;
+}
+header nav {
+  user-select: none;
+  display: flex;
+}
+header nav .nav__list {
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+header nav .nav__list .list__item, header nav .nav__list .list__item .item__dropdown .dropdown__item {
+  list-style: none;
+  margin-bottom: 0;
+  margin: 2px;
+  align-content: center;
+  margin-bottom: 0;
+  padding: 0.5rem;
+}
+header nav .nav__list .list__item a, header nav .nav__list .list__item .item__dropdown .dropdown__item a {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+header nav .nav__list .list__item label, header nav .nav__list .list__item .envio__form-entrega .contendor-envio-domicilio p, .envio__form-entrega .contendor-envio-domicilio header nav .nav__list .list__item p, header nav .nav__list .list__item .contacto__formulario textarea, .contacto__formulario header nav .nav__list .list__item textarea, header nav .nav__list .list__item .contacto__formulario input, .contacto__formulario header nav .nav__list .list__item input, header nav .nav__list .list__item .item__dropdown .dropdown__item label, header nav .nav__list .list__item .item__dropdown .dropdown__item .contacto__formulario textarea, .contacto__formulario header nav .nav__list .list__item .item__dropdown .dropdown__item textarea, header nav .nav__list .list__item .item__dropdown .dropdown__item .contacto__formulario input, .contacto__formulario header nav .nav__list .list__item .item__dropdown .dropdown__item input {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+header nav .nav__list .list__item .item__dropdown, header nav .nav__list .list__item .item__dropdown .dropdown__item .item__dropdown {
+  display: none;
+  position: absolute;
+  min-width: 18rem;
+  z-index: 1;
+  border-radius: 0 0 10px 10px;
+  background-color: rgba(19, 93, 135, 0.8);
+  min-width: 180px;
+  padding: 20px 15px;
+}
+header nav .nav__list .list__item .item__dropdown .dropdown__item a {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+header nav .nav__list .list__item:hover .item__dropdown, header nav .nav__list .list__item .item__dropdown .dropdown__item:hover .item__dropdown {
+  display: block;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*-LAYOUT_Titulo Principal: Para Todos los H1*/
+h1 {
+  font-family: "Barlow", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #135D87;
+  text-align: center;
+  border-top: 1px solid #aaa;
+  padding-top: 0.5rem;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*-LAYOUT_Descripcion Principal: Para Todos los p con esta clase*/
+.descripcion-principal {
+  align-items: center;
+}
+.descripcion-principal h2, .descripcion-principal p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #34495E;
+  text-align: center;
+  width: 80%;
+  margin: 1rem auto;
+}
+.descripcion-principal p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  /* color:$color-texto;
+  text-align: center;
+  width: 80%;
+  margin: auto; */
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*-LAYOUT_Contenedor Tarjeta: Para todos los contenedores de tarjetas*/
+.contenedor__tarjeta {
+  display: grid;
+  margin: 1rem auto;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: 80%;
+  border-radius: 1rem;
+  box-shadow: 0px -2px 36px -16px #135D87;
+  margin-bottom: 3rem;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*-LAYOUT_Contenedor Galeria productos: Para todos los contenedores*/
+.galeria__productos {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  justify-content: center;
+  align-items: baseline;
+  width: 80%;
+  border-radius: 1rem;
+  box-shadow: 0px -2px 36px -16px #135D87;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*-LAYOUT_Contenedor Contactos: Contenedor form Contactos*/
+.contenedor__contacto {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  box-shadow: 0px -2px 36px -16px #135D87;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*-LAYOUT_Contenedor Footer:*/
+.contenedor-footer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #135D87;
+  width: 100%;
+}
+.contenedor-footer .contenedor-footer__columna {
+  flex: 1; /* Cada columna ocupa 1/3 del ancho disponible */
+  padding: 0.5rem 0.5rem;
+}
+.contenedor-footer .contenedor-footer__columna h3 {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #E6E6E6;
+}
+.contenedor-footer .contenedor-footer__columna p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #E6E6E6;
+}
+.contenedor-footer .contenedor-footer__columna a {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #E6E6E6;
+}
+.contenedor-footer .contenedor-footer__columna a img {
+  object-fit: cover;
+  width: 2rem;
+  margin-right: 1rem;
+}
+.contenedor-footer .columna__parrafo {
+  display: block;
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #E6E6E6;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+.section-filtro {
+  align-items: center;
+  width: 80%;
+  margin: 2rem auto;
+}
+.section-filtro nav {
+  margin: auto;
+  text-align: center;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  /* display: flex; */
+}
+.section-filtro nav .navproductos {
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.section-filtro nav .navproductos .navproductos__item {
+  margin-bottom: 0;
+  margin: 25px;
+  margin-bottom: 0;
+}
+.section-filtro nav .navproductos .navproductos__item a {
+  color: #135D87;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+.section-filtro nav .navproductos .navproductos__item:hover .item__dropdown {
+  /* display: block; */
+}
+
+.elemento-seleccionado {
+  border-bottom: 2px solid #135D87;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+#seccion-carrito {
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 95vw;
+  height: 95vh;
+  overflow: none;
+  background-color: rgba(19, 93, 135, 0.7);
+  justify-content: center;
+  border: 1px solid white;
+  padding: 2rem;
+  box-sizing: border-box;
+  margin: 1rem auto;
+  justify-content: center;
+  border-radius: 1rem;
+  /* @include box-shadow($color-celeste); */
+}
+#seccion-carrito #seccion-carrito__boton-salir {
+  margin: 0;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #135D87;
+  color: #E6E6E6;
+  border: 1px solid #E6E6E6;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
+#seccion-carrito #contendor-carrito {
+  border-radius: 1rem;
+  background-color: #EDEDED;
+  border-radius: 5px;
+  margin: 0.5rem;
+  width: 75%;
+  justify-content: start;
+  overflow: auto;
+}
+#seccion-carrito #contendor-carrito h2, #seccion-carrito #contendor-carrito .tarjeta--filosofia-calidad p, .tarjeta--filosofia-calidad #seccion-carrito #contendor-carrito p, #seccion-carrito #contendor-carrito .descripcion-principal p, .descripcion-principal #seccion-carrito #contendor-carrito p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #135D87;
+  margin-left: 0.5rem;
+  text-align: center;
+}
+#seccion-carrito #contendor-carrito #contendor-carrito__contenedor-articulos {
+  overflow: auto;
+}
+#seccion-carrito #contendor-resumen-compra {
+  border-radius: 1rem;
+  background-color: #EDEDED;
+  border-radius: 5px;
+  margin: 0.5rem;
+  width: 25%;
+  justify-content: center;
+}
+#seccion-carrito #contendor-resumen-compra h2, #seccion-carrito #contendor-resumen-compra .tarjeta--filosofia-calidad p, .tarjeta--filosofia-calidad #seccion-carrito #contendor-resumen-compra p, #seccion-carrito #contendor-resumen-compra .descripcion-principal p, .descripcion-principal #seccion-carrito #contendor-resumen-compra p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #135D87;
+  text-align: center;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+#seccion-carrito-finalizacion {
+  position: fixed;
+  flex-wrap: wrap;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 95vw;
+  height: 95vh;
+  overflow: none;
+  background-color: rgba(19, 93, 135, 0.7);
+  justify-content: center;
+  border: 1px solid white;
+  padding: 2rem;
+  box-sizing: border-box;
+  margin: 1rem auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+#seccion-carrito-finalizacion #seccion-carrito-finalizacion__boton-salir {
+  margin: 0;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #135D87;
+  color: #E6E6E6;
+  border: 1px solid #E6E6E6;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
+#seccion-carrito-finalizacion .seccion-carrito-finalizacion__subcontenedor {
+  background-color: white;
+  width: 95%;
+  padding: 0;
+  height: 90%;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5rem 1fr 1fr;
+}
+#seccion-carrito-finalizacion .seccion-carrito-finalizacion__subcontenedor h2, #seccion-carrito-finalizacion .seccion-carrito-finalizacion__subcontenedor .tarjeta--filosofia-calidad p, .tarjeta--filosofia-calidad #seccion-carrito-finalizacion .seccion-carrito-finalizacion__subcontenedor p, #seccion-carrito-finalizacion .seccion-carrito-finalizacion__subcontenedor .descripcion-principal p, .descripcion-principal #seccion-carrito-finalizacion .seccion-carrito-finalizacion__subcontenedor p {
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #135D87;
+  text-align: center;
+  grid-column: 1/span 2;
+}
+
+/*COMPONENTS:*/
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*-COMPONENTS_Tarjeta Uno: Estilo Texto Izquierda, Imagen Derecha*/
+.item--texto {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  padding: 0.5rem;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: auto;
+  text-align: justify;
+  color: #34495E;
+}
+
+.item--imagen {
+  grid-column: 2/3;
+  grid-row: 1/4;
+  margin: auto;
+  width: 100%;
+  text-align: right;
+}
+.item--imagen picture img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: auto;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*-COMPONENTS_Tarjeta Dos: Estilo Texto Derecha, Imagen Izquierda<*/
+.item--textoDos {
+  grid-column: 2/3;
+  grid-row: 1/4;
+  padding: 0.5rem;
+  margin: auto;
+  text-align: justify;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #34495E;
+}
+
+.item--imagenDos {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  margin: auto;
+  width: 100%;
+  text-align: left;
+}
+.item--imagenDos picture img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: auto;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*-COMPONENTS_Tarjeta Tres: Titulo, Parrafo e Imagenes c/Leyenda*/
+.tarjeta--filosofia-calidad {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: 80%;
+  border-radius: 1rem;
+  box-shadow: 0px -2px 36px -16px #135D87;
+  align-items: center;
+}
+.tarjeta--filosofia-calidad h2, .tarjeta--filosofia-calidad p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #34495E;
+  display: block;
+  width: 100%;
+  margin: 0.5rem;
+}
+.tarjeta--filosofia-calidad p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.tarjeta--filosofia-calidad .tarjeta--filosofia__item {
+  float: none;
+  width: 10rem;
+  box-sizing: border-box;
+}
+.tarjeta--filosofia-calidad .tarjeta--filosofia__item picture img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: auto;
+}
+.tarjeta--filosofia-calidad .tarjeta--filosofia__item figcaption {
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #34495E;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+.productos__item {
+  /* width: 20rem; */
+  width: 15rem;
+  height: auto;
+  box-sizing: border-box;
+  margin: 1rem;
+  position: relative;
+  user-select: none;
+}
+.productos__item figure {
+  margin: 0;
+}
+.productos__item figure img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: auto;
+  /* width: 100%; */
+}
+.productos__item figure img:hover {
+  transform: scale(1.2, 1.2);
+  transition: transform 1s;
+  transition: all 1s;
+}
+.productos__item figure figcaption {
+  text-align: center;
+  align-content: center;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #135D87;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.productos__item .item-infoProducto .infoProducto-descripcion, .productos__item .item-infoProducto .infoProducto-stock, .productos__item .item-infoProducto .infoProducto-precio {
+  margin: 0;
+  text-align: center;
+  align-content: center;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  width: 100%;
+}
+.productos__item .item-infoProducto .infoProducto-precio {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #135D87;
+}
+.productos__item .item-infoProducto .infoProducto-id {
+  display: none;
+}
+.productos__item .item-infoProducto button {
+  text-align: center;
+  align-content: center;
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #135D87;
+  color: #E6E6E6;
+  height: 2.5rem;
+  margin: 0;
+  border-radius: 0px 5px 0px 5px;
+}
+.productos__item .sin-stock {
+  box-sizing: border-box;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: transparent; */
+  background-color: rgba(0, 0, 0, 0.4);
+  font-family: "Barlow", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  /* color: white; */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black; */
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}
+.productos__item .sin-stock p {
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* width: 80%; */
+  width: 100%;
+  height: 15%;
+  text-align: center;
+  /*  border: 2px solid black; */
+  /* border-radius: 50%; */
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  align-items: center;
+  user-select: none;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*-COMPONENTS__formulario Contacto: Formulario y Mapa*/
+.contacto__formulario {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.contacto__formulario h3 {
+  display: block;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #34495E;
+  text-align: center;
+  width: 90%;
+}
+.contacto__formulario label, .contacto__formulario .envio__form-entrega .contendor-envio-domicilio p, .envio__form-entrega .contendor-envio-domicilio .contacto__formulario p, .contacto__formulario textarea, .contacto__formulario input {
+  display: block;
+  margin: 0.2rem auto;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #34495E;
+  width: 90%;
+  align-items: center;
+}
+.contacto__formulario input {
+  border: none;
+  border-bottom: 1px solid #135D87;
+}
+.contacto__formulario input:focus {
+  outline: none;
+}
+.contacto__formulario textarea {
+  border: none;
+  border-bottom: 1px solid #135D87;
+}
+.contacto__formulario textarea:focus {
+  outline: none;
+}
+.contacto__formulario button {
+  display: inline;
+  border-radius: 8px;
+  width: 100px;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  background-color: #135D87;
+  color: #E6E6E6;
+}
+
+.contacto__mapa {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.contacto__mapa h3 {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #34495E;
+  text-align: center;
+}
+.contacto__mapa iframe {
+  margin: 0.5rem auto;
+  width: 90%;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+.modal-agregarProducto-Carrito {
+  /* display: flex; */
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  justify-content: center;
+  transition: all 3s ease-in-out;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__ConetenedorImagen {
+  background-color: #E6E6E6;
+  width: 45%;
+  margin: 2rem 0;
+  padding: 0;
+  background-color: #EDEDED;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__ConetenedorImagen img {
+  margin: auto;
+  width: 90%;
+  display: block;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* background-color: $colorgris-claro; */
+  background-color: #EDEDED;
+  width: 25%;
+  margin: 2rem 0;
+  border-left: 1px solid #85929E;
+  padding-left: 1rem;
+  /* #Conetenedorform__agregar-carrito{
+      position: absolute;
+      bottom: 5rem;
+      left: 0;
+      right: 0;
+      border-radius: 8px;
+      width: 15rem;
+      margin: .5rem auto;
+      padding: .5rem;
+      background-color: $color-celeste;
+      color: $colorgris-claro;
+
+  } */
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .Conetenedorform__boton-salir {
+  margin: 0;
+  position: absolute;
+  top: 13px;
+  right: 3px;
+  left: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #135D87;
+  color: #E6E6E6;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform h3 {
+  /* display: block; */
+  width: 100%;
+  margin-top: 5rem;
+  display: block;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #135D87;
+  user-select: none;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .precio {
+  margin-top: 0;
+  display: block;
+  width: 50%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #135D87;
+  user-select: none;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #34495E;
+  user-select: none;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-disponible {
+  display: flex;
+  margin-right: 1rem;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar {
+  display: flex;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .envio__form-entrega .contendor-envio-domicilio p, .envio__form-entrega .contendor-envio-domicilio .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar p, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea {
+  /* @extend p; */
+  font-family: "Barlow", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #34495E;
+  user-select: none;
+  margin-right: 1rem;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #34495E;
+  border: 1px solid #135D87;
+  width: 5rem;
+  color: #34495E;
+  text-align: center;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input:focus {
+  outline: 1px solid #135D87;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .Conetenedorform__agregar-carrito {
+  text-align: center;
+  align-content: center;
+  width: 10rem;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #135D87;
+  color: #E6E6E6;
+  height: 2.5rem;
+  margin: 12rem;
+  border-radius: 5px 5px 5px 5px;
+  margin: auto;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+#mensaje-Alerta {
+  /* display: none; */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  justify-content: center;
+}
+#mensaje-Alerta #mensaje-Alerta__contenedor {
+  position: relative;
+  background-color: #E6E6E6;
+  width: 25%;
+  height: 25%;
+  margin: 10% auto;
+  padding: 0;
+  background-color: #EDEDED;
+  border-radius: 5px;
+}
+#mensaje-Alerta #mensaje-Alerta__contenedor #mensaje-Alerta__titulo {
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  padding: 0.3rem;
+  /* margin-top: 1rem; */
+  display: block;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  background-color: #135D87;
+  color: #E6E6E6;
+  user-select: none;
+  border-bottom: 1px solid #135D87;
+  border-radius: 5px 5px 0 0;
+}
+#mensaje-Alerta #mensaje-Alerta__contenedor #mensaje-Alerta__mensaje {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #34495E;
+  user-select: none;
+  text-align: left;
+  width: 90%;
+  margin: 0.5rem auto;
+}
+#mensaje-Alerta #mensaje-Alerta__contenedor #mensaje-Alerta__boton {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 8px;
+  width: 5rem;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  background-color: #135D87;
+  color: #E6E6E6;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+.carrito-articulo {
+  display: flex;
+  width: 100%;
+  /*height: 100%; */
+  box-sizing: border-box;
+  align-items: center;
+  /* text-align: center; */
+  border-bottom: 1px solid #85929E;
+}
+.carrito-articulo #articulo__contenedor-imagen {
+  width: 15%;
+  /* margin: 2rem 0; */
+  /* padding: 0; */
+  /* background-color: $color-fondo-form; */
+}
+.carrito-articulo #articulo__contenedor-imagen #contenedor-imagen__imagen {
+  /* margin: auto; */
+  width: 100%;
+  /* display: block; */
+}
+.carrito-articulo #articulo__contenedor-descripcion {
+  margin: auto;
+  text-align: left;
+  width: 70%;
+  box-sizing: border-box;
+}
+.carrito-articulo #articulo__contenedor-descripcion #contenedor-descripcion__nombre-producto {
+  text-align: left;
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #135D87;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carrito-articulo #articulo__contenedor-descripcion #contenedor-descripcion__descripcion-producto {
+  text-align: left;
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #34495E;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carrito-articulo #articulo__boton-cantidad {
+  box-sizing: border-box;
+  width: 25%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #34495E;
+}
+.carrito-articulo #articulo__boton-eliminar {
+  box-sizing: border-box;
+  margin: 2rem;
+  padding: 0;
+  /* border: none; */
+  /* background-color: transparent; */
+  width: 3%;
+  height: 3%;
+}
+.carrito-articulo #articulo__boton-eliminar img {
+  width: 100%;
+}
+.carrito-articulo #articulo__precio {
+  box-sizing: border-box;
+  width: 25%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #34495E;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+#resumen-compra__total-prodcutos {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #34495E;
+  margin: 1rem 0.5rem;
+}
+
+#resumen-compra__importe-total {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #34495E;
+  margin: 1rem 0.5rem;
+}
+
+button {
+  display: block;
+  border-radius: 8px;
+  width: 12rem;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  background-color: #135D87;
+  color: #E6E6E6;
+  margin-top: 5rem;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+.carrito-finalizacion__entrega {
+  grid-column: 1/2;
+  grid-row: 2/4;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.envio__form-entrega {
+  background-color: #EDEDED;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  margin: 0.5rem;
+  /*  height: 100%; */
+}
+.envio__form-entrega h3 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #135D87;
+  text-align: center;
+}
+.envio__form-entrega .contendor-envio-planta, .envio__form-entrega .contendor-envio-datos-domicilio, .envio__form-entrega .contendor-envio-localidad, .envio__form-entrega .contendor-envio-provincia, .envio__form-entrega .contendor-envio-domicilio {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border-bottom: 1px solid #85929E;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.5rem;
+}
+.envio__form-entrega .contendor-envio-planta p, .envio__form-entrega .contendor-envio-datos-domicilio p, .envio__form-entrega .contendor-envio-localidad p, .envio__form-entrega .contendor-envio-provincia p, .envio__form-entrega .contendor-envio-domicilio p {
+  margin-left: auto;
+  /* @extend label; */
+}
+.envio__form-entrega .contendor-envio-domicilio {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.envio__form-entrega .contendor-envio-domicilio p {
+  margin-left: auto;
+}
+.envio__form-entrega .contendor-envio-provincia {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.envio__form-entrega .contendor-envio-localidad {
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+.envio__form-entrega .contendor-envio-datos-domicilio {
+  grid-column: 1/2;
+  grid-row: 6/7;
+}
+
+.style-label-input {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #34495E;
+}
+
+.style-select {
+  width: 20rem;
+  height: 1.5rem;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #34495E;
+  border: none;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  /* margin-bottom: 1rem; */
+  border-bottom: 1px solid #135D87;
+}
+.style-select:focus {
+  outline: none;
+  border: 1px solid #135D87;
+}
+.style-select option {
+  background-color: #f9f9f9;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #34495E;
+}
+.style-select option:checked {
+  background-color: rgba(19, 93, 135, 0.7);
+  color: #fff;
+}
+
+.envio-datos-domicilio {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.envio-datos-domicilio:focus {
+  outline: none;
+  border: 1px solid #135D87;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+.carrito-finalizacion__pago {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  width: 100%;
+  /* background-color: red; */
+}
+.carrito-finalizacion__pago .envio__form-pago {
+  background-color: #EDEDED;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  margin: 0.5rem;
+}
+.carrito-finalizacion__pago .envio__form-pago h3 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #135D87;
+  text-align: center;
+}
+.carrito-finalizacion__pago .envio__form-pago .contendor-pago-efectivo, .carrito-finalizacion__pago .envio__form-pago .contendor-pago-transferencia, .carrito-finalizacion__pago .envio__form-pago .contendor-pago-tarjeta {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border-bottom: 1px solid #85929E;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.5rem;
+}
+.carrito-finalizacion__pago .envio__form-pago .contendor-pago-tarjeta {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.carrito-finalizacion__pago .envio__form-pago .contendor-pago-transferencia {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+
+.style-label-input {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #34495E;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+.carrito-finalizacion__resumen {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  /* width: 100%; */
+  background-color: #EDEDED;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-rows: repeat(5, 1fr); */
+  grid-template-rows: repeat(5, 1fr);
+  margin: 0.5rem;
+}
+.carrito-finalizacion__resumen h3 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #135D87;
+  text-align: center;
+  margin: 0.5rem;
+}
+.carrito-finalizacion__resumen .resumen__total-productos, .carrito-finalizacion__resumen .resumen__total-total, .carrito-finalizacion__resumen .resumen__total-envio {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border-bottom: 1px solid #85929E;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0.5rem;
+}
+.carrito-finalizacion__resumen .resumen__total-productos p, .carrito-finalizacion__resumen .resumen__total-total p, .carrito-finalizacion__resumen .resumen__total-envio p {
+  /* margin:0;
+  margin-left: auto; */
+  margin: 0;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #34495E;
+}
+.carrito-finalizacion__resumen .resumen__total-envio {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.carrito-finalizacion__resumen .resumen__total-envio p {
+  margin-left: auto;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #34495E;
+}
+.carrito-finalizacion__resumen .resumen__total-total {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.carrito-finalizacion__resumen .resumen__total-total p {
+  /* margin:0 */
+  /* margin-left: auto; */
+  padding: 0;
+  text-align: right;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #34495E;
+}
+
+.terminar-compra {
+  grid-column: 1/2;
+  grid-row: 5/6;
+  text-align: center;
+  align-content: center;
+  width: 10rem;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #135D87;
+  color: #E6E6E6;
+  height: 2.5rem;
+  margin: 12rem;
+  border-radius: 5px 5px 5px 5px;
+  margin: auto;
+}
+
+.style-label-input {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #34495E;
+}
+
+/*UTILITIES:*/
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*-UTILITIES__Media Query Small: Para la vista Mobile*/
+@media screen and (max-width: 427px) {
+  header a {
+    display: inline-block;
+    width: 80px;
+  }
+  header .btn-toggle {
+    display: inline;
+    background-color: #135D87;
+    margin: 0.5rem;
+    border: none;
+    cursor: pointer;
+  }
+  header input:checked ~ nav {
+    display: block;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  header .nav {
+    display: none;
+  }
+  header .nav .nav__list {
+    display: block;
+  }
+  header .nav .nav__list .list__item, header .nav nav .nav__list .list__item .item__dropdown .dropdown__item, header nav .nav .nav__list .list__item .item__dropdown .dropdown__item {
+    padding: 0;
+  }
+  header .nav .nav__list .list__item a, header .nav nav .nav__list .list__item .item__dropdown .dropdown__item a, header nav .nav .nav__list .list__item .item__dropdown .dropdown__item a {
+    text-align: left;
+  }
+  header .nav .nav__list .list__item .item__dropdown, header .nav nav .nav__list .list__item .item__dropdown .dropdown__item .item__dropdown, header nav .nav .nav__list .list__item .item__dropdown .dropdown__item .item__dropdown {
+    visibility: hidden;
+  }
+  header .nav .nav__list .list__item input:checked ~ .item__dropdown {
+    visibility: visible;
+    display: block;
+    width: 100%;
+    flex-wrap: wrap;
+    position: inherit;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 0 0;
+    padding: 0.5rem;
+  }
+  header .nav .nav__list .list__item input:checked ~ .item__dropdown li {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    text-align: left;
+    padding: 0;
+  }
+  header .nav .nav__list .list__item input:checked ~ .item__dropdown li a {
+    display: block;
+    width: 100%;
+    color: #E6E6E6;
+  }
+  header .nav .nav__list:hover .item__dropdown {
+    display: none;
+  }
+  .navproductos {
+    display: block;
+  }
+  .navproductos .navproductos__item {
+    padding: 0;
+  }
+  .navproductos .navproductos__item a {
+    text-align: left;
+  }
+  .contenedor__tarjeta {
+    display: flex;
+    flex-direction: column;
+  }
+  .contenedor__tarjeta .item--textoDos {
+    order: 1;
+  }
+  .contenedor__tarjeta .item--imagenDos {
+    order: 2;
+  }
+  .contenedor__contacto {
+    flex-direction: column;
+    box-shadow: none;
+  }
+  .contenedor__contacto .contacto__formulario {
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 2rem;
+    box-shadow: 0px -2px 36px -16px #135D87;
+  }
+  .contenedor__contacto .contacto__mapa {
+    width: 100%;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px -2px 36px -16px #135D87;
+  }
+  .contenedor-footer {
+    flex-direction: column;
+  }
+  .contenedor-footer .contenedor-footer__columna {
+    flex: 1; /* Cada columna ocupa todo el ancho disponible */
+    border-bottom: 1px solid #E6E6E6;
+    text-align: center;
+    /* a:not(.email){
+        display: inline;
+        flex-wrap: wrap;
+    } */
+  }
+  .contenedor-footer .contenedor-footer__columna a {
+    display: block;
+    margin: 1rem;
+  }
+  .contenedor-footer .columna__parrafo {
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*-UTILITIES__Media Query Medium: Para la vista Tablet*/
+@media screen and (min-width: 427px) and (max-width: 767px) {
+  .contenedor__tarjeta {
+    display: flex;
+    flex-direction: column;
+  }
+  .contenedor__tarjeta .item--textoDos {
+    order: 1;
+  }
+  .contenedor__tarjeta .item--imagenDos {
+    order: 2;
+  }
+  .contenedor__contacto {
+    flex-direction: column;
+    box-shadow: none;
+  }
+  .contenedor__contacto .contacto__formulario {
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 2rem;
+    box-shadow: 0px -2px 36px -16px #135D87;
+  }
+  .contenedor__contacto .contacto__mapa {
+    width: 100%;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px -2px 36px -16px #135D87;
+  }
+  .contenedor-footer {
+    flex-direction: column;
+  }
+  .contenedor-footer .contenedor-footer__columna {
+    flex: 1; /* Cada columna ocupa todo el ancho disponible */
+    border-bottom: 1px solid #E6E6E6;
+    text-align: center;
+  }
+  .contenedor-footer .contenedor-footer__columna a {
+    display: block;
+  }
+  .contenedor-footer .contenedor-footer__columna a:not(.email) {
+    display: inline;
+  }
+  .contenedor-footer .columna__parrafo {
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*-UTILITIES__Media Query Large: Para la vista Desktop en Caso de NECESITAR*/
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+/*-UTILITIES__Animaciones:*/
+/*--Animaciones: Clase C/Animacion Aplicada*/
+.elemento-balancear {
+  animation: animacion-balancear 1s ease-in-out infinite;
+}
+
+/*--Animaciones: Hacer balancear elemento*/
+@keyframes animacion-balancear {
+  0% {
+    transform: translateZ(0) rotateZ(0deg);
+  }
+  50% {
+    transform: translateZ(50px) rotateZ(2.5deg);
+  }
+  100% {
+    transform: translateZ(0) rotateZ(0deg);
+  }
+}
+/*--Animaciones: hacer que elemento vaya creciendo y posicionandose
+                para dar el efecto que la imagen se llena de blanco*/
+@keyframes relleno-liquido {
+  0% {
+    height: 10%;
+    width: 2%;
+    top: 0;
+    right: 50%;
+  }
+  50% {
+    height: 50%;
+    width: 25%;
+    top: 0;
+    right: 25%;
+  }
+  100% {
+    top: 0;
+    right: 0;
+    height: 90%;
+    width: 100%;
+  }
+}
+/*--Animaciones: hacer que el boton whatasapp genere un pulso*/
+@keyframes pulso {
+  0% {
+    box-shadow: 0 0 0 0 #2BF113;
+  }
+  30% {
+    box-shadow: 0 0 0 20px rgba(239, 76, 53, 0);
+  }
+  70% {
+    box-shadow: 0 0 0 0px rgba(239, 76, 53, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0px #25D366;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
